@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --ivory: #f8f4ee;
+  --cream: #efe5d8;
+  --gold: #b8863b;
+  --gold-dark: #946a2e;
+  --ink: #211e1a;
+  --muted: #81796f;
+  --line: #e8dfd4;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #fffdfa;
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+.serif { font-family: "Playfair Display", Georgia, serif; }
+.gold-button {
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  border-radius: 8px; padding: .85rem 1.25rem; color: white; background: var(--gold);
+  font-size: .82rem; font-weight: 600; transition: background .2s, transform .2s;
+}
+.gold-button:hover { background: var(--gold-dark); transform: translateY(-1px); }
+.icon-button {
+  display: inline-flex; align-items: center; justify-content: center; position: relative;
+  width: 38px; height: 38px; border-radius: 50%; transition: background .2s;
+}
+.icon-button:hover { background: #eee6dc; }
+.section-wrap { width: min(1200px, calc(100% - 40px)); margin-inline: auto; }
+.product-image { transition: transform .45s ease; }
+.product-card:hover .product-image { transform: scale(1.035); }
+@media (max-width: 640px) {
+  .section-wrap { width: calc(100% - 28px); }
+  .mobile-safe-bottom { padding-bottom: 90px; }
+}
